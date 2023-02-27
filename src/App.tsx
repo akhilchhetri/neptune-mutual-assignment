@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Converter from "./components/Converter";
+import { NeptuneLogo } from "./components/Icons";
+import { useModal } from "./hooks/useModal";
+import WalletNotConnected from "./components/Modal/WalletNotConnected";
+import { react } from "@babel/types";
 
 function App() {
+  const { modal, showModal } = useModal();
+  useEffect(() => {}, [modal]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="relative flex min-h-[100vh] w-full flex-col items-center justify-center gap-10 bg-primary">
+      <header>
+        <NeptuneLogo />
       </header>
+      {modal && <WalletNotConnected showModal={showModal} />}
+      <Converter showModal={showModal} />
     </div>
   );
 }
