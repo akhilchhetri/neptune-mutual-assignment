@@ -7,7 +7,6 @@ const WalletNotConnected = ({ showModal }: any) => {
     active,
     deactivate,
     balance,
-    library,
     error,
     setError,
   } = useWallet();
@@ -110,7 +109,10 @@ const WalletNotConnected = ({ showModal }: any) => {
                         </tr>
                         <tr className="border-b border-[#ffffff1c]">
                           <td className="text-left">Balance</td>
-                          <td className="text-right">{balance?.toNumber()}</td>
+                          <td className="text-right">
+                            {Number(balance?.toString()) / Math.pow(10, 18)}{" "}
+                            TBNB
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -126,8 +128,8 @@ const WalletNotConnected = ({ showModal }: any) => {
                 </>
               ) : (
                 <div className="mb-10 py-10 px-5">
-                  <h2 className="font-semibold text-red-600">
-                    Please change the Wallet newtwork to Binance Smart Chain -
+                  <h2 className="font-semibold text-red-300">
+                    Please change the chain newtwork to Binance Smart Chain -
                     Testnet
                   </h2>
                 </div>
