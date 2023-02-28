@@ -40,7 +40,7 @@ const Input = ({
           placeholder={placeholder}
           value={tValue}
           name={name?.symbol}
-          onChange={(e) => handleChange(e, "hey")}
+          onChange={(e) => handleChange(e, type)}
         />
       )}
     </div>

@@ -1,7 +1,6 @@
 import Input from "../Input";
 import { ArrowSwapVertical } from "iconsax-react";
 import { useConverter } from "../../hooks/useConverter";
-import { useModal } from "../../hooks/useModal";
 
 const Converter = ({ showModal }: any) => {
   const {

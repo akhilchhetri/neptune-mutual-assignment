@@ -15,7 +15,6 @@ export const Tokens: Array<ICurrencyProps> = [
 export const useConverter = () => {
   const [from, setFrom] = useState(Tokens[0]);
   const [to, setTo] = useState(Tokens[1]);
-  //   const [amount, setAmount] = useState<string>("");
   const [fromValue, setFromValue] = useState<number | undefined>(undefined);
   const [toValue, setToValue] = useState<number | undefined>(undefined);
 
@@ -29,14 +28,6 @@ export const useConverter = () => {
       setTo(Tokens[1]);
     }
   };
-  useEffect(() => {
-    if (fromValue && toValue) {
-      let a = fromValue;
-      let b = toValue;
-      setFromValue(b);
-      setToValue(a);
-    }
-  }, [from, to]);
   const handleFirstFieldChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let a = e.target.value as any;
     setFromValue(a);
@@ -49,7 +40,14 @@ export const useConverter = () => {
     let from_value = (a * to?.price) / from?.price;
     setFromValue(parseFloat(from_value?.toFixed(2)));
   };
-
+  useEffect(() => {
+    if (fromValue && toValue) {
+      let a = fromValue;
+      let b = toValue;
+      setFromValue(b);
+      setToValue(a);
+    }
+  }, [from, to]);
   return {
     from,
     to,
