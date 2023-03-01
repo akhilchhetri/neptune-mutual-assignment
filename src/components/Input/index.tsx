@@ -1,12 +1,9 @@
-import { ICurrencyProps, useConverter, Tokens } from "../../hooks/useConverter";
-import { useEffect, useState } from "react";
-import { number } from "yargs";
-type Token = {};
+import { ITokens } from "../../hooks/useConverter";
 interface IInputProps {
-  name: ICurrencyProps;
-  from?: ICurrencyProps;
-  to?: ICurrencyProps;
-  label: ICurrencyProps;
+  name: ITokens;
+  from?: ITokens;
+  to?: ITokens;
+  label: ITokens;
   placeholder: string | undefined;
   type: string;
   fValue?: number;
@@ -25,7 +22,7 @@ const Input = ({
 }: IInputProps) => {
   return (
     <div className="my-8">
-      <label className="text-white">{label?.symbol}</label>
+      <label className="font-bold text-white">{label?.symbol}</label>
       {type === "from" ? (
         <input
           className="w-full rounded-[12px] p-5 text-greyMenu"

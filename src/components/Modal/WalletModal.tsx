@@ -16,10 +16,10 @@ const WalletNotConnected = ({ showModal }: any) => {
         activate(injectedConnector);
         setError("");
       } else {
-        setError("No wallet detected");
+        setError("No Metamask wallet detected");
       }
     } catch (e) {
-      setError("No wallet detected");
+      setError("No Metamask wallet detected");
     }
   };
 
@@ -129,8 +129,8 @@ const WalletNotConnected = ({ showModal }: any) => {
               ) : (
                 <div className="mb-10 py-10 px-5">
                   <h2 className="font-semibold text-red-300">
-                    Please change the chain newtwork to Binance Smart Chain -
-                    Testnet
+                    Network not supported: Please change the chain newtwork to
+                    Binance Smart Chain - Testnet
                   </h2>
                 </div>
               )}

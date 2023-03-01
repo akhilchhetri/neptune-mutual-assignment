@@ -1,14 +1,11 @@
-import { useState, useEffect, useMemo } from "react";
-interface IConvertValueProps {
-  value: any;
-  name: string;
-}
-export interface ICurrencyProps {
+import { useState, useEffect } from "react";
+
+export interface ITokens {
   currency: string;
   symbol: string;
   price: number;
 }
-export const Tokens: Array<ICurrencyProps> = [
+export const Tokens: Array<ITokens> = [
   { currency: "Neptune", symbol: "NEP", price: 3.0 },
   { currency: "BUSD", symbol: "BUSD", price: 1.0 },
 ];

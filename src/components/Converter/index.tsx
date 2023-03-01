@@ -13,7 +13,7 @@ const Converter = ({ showModal }: any) => {
     handleSecondFieldChange,
   } = useConverter();
   return (
-    <div className="h-auto w-[90%] rounded-[12px] bg-darkBg px-10 py-20 md:w-[40%]">
+    <div className="h-auto w-[90%] rounded-[12px] bg-darkBg px-10 py-20 lg:w-[40%]">
       <h1 className="text-[24px] font-bold text-white">Coin Converter</h1>
       <div className="">
         <Input

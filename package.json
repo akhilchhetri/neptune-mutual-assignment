@@ -1,5 +1,10 @@
 {
   "name": "neptune-assignment",
+  "author": {
+    "email": "akhyl.78@gmail.com",
+    "name": "Akhil Chhetri",
+    "github": "https://github.com/akhilchhetri/neptune-mutual-assignment"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {

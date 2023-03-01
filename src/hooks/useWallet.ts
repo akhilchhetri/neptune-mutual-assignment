@@ -23,7 +23,6 @@ export const useWallet = () => {
       setBalance(result);
     });
   }
-
   return {
     activate,
     chainId,
